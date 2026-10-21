@@ -1,0 +1,25 @@
+@startuml layered-architecture
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam dpi 200
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 14
+skinparam nodesep 30
+skinparam ranksep 34
+skinparam component {
+  BackgroundColor #F8FAFC
+  BorderColor #1E293B
+  ArrowColor #1E293B
+}
+title SCAPMS layered architecture - responsibilities and dependencies
+
+[GUI layer\nMainWindow, Dashboard, Patient, Appointment,\nQueue, Search, Report and Admin panels] as GUI
+[Controller layer\nClinicManager, AppointmentController,\nSearchEngine, SortEngine, ReportGenerator,\nAdminCommand hierarchy] as CTRL
+[Model layer\nClinicDatabase, PatientRecord hierarchy,\nAppointment, MedicalService] as MODEL
+[Utilities\nIDGenerator, FileHandler, ClinicException hierarchy] as UTIL
+
+GUI --> CTRL : user events / calls
+CTRL --> MODEL : owns, validates, persists
+CTRL ..> UTIL
+MODEL ..> UTIL
+@enduml

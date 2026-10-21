@@ -1,0 +1,58 @@
+% ============================================================================
+%  SCAPMS submission report - LaTeX header used by pandoc
+% ============================================================================
+
+\usepackage{fvextra}
+\fvset{breaklines=true,breakanywhere=true}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,commandchars=\\\{\}}
+
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+
+\AtBeginEnvironment{longtable}{\small}
+\renewcommand{\arraystretch}{1.2}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  urlcolor=blue!45!black,
+  citecolor=blue!45!black,
+  pdftitle={SCAPMS - COS202 Programming II Lab Assessment},
+  pdfauthor={Otito Ebigbo},
+  pdfsubject={Smart Clinic Appointment and Patient Management System},
+  pdfkeywords={C++, Qt, OOP, data structures, algorithms, clinic}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small COS202 Programming II - SCAPMS}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[C]{\small Smart Clinic Appointment \& Patient Management System}
+
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\setlist{itemsep=1pt, topsep=3pt, leftmargin=1.4em}
+
+\titleformat{\section}{\Large\bfseries\color{black!85}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{black!80}}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{black!75}}{\thesubsubsection}{0.5em}{}
+
+\captionsetup{font=small, labelfont=bf, skip=4pt}
+
+\newenvironment{partpage}[2]{%
+  \clearpage
+  \thispagestyle{plain}%
+  \vspace*{0.18\textheight}%
+  {\color{black!60}\Large\bfseries PART #1\par}%
+  \vspace{6pt}%
+  {\color{black}\Huge\bfseries #2\par}%
+  \vspace{10pt}%
+  \noindent\rule{\textwidth}{1.2pt}%
+}{%
+  \vspace{8pt}%
+}

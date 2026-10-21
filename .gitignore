@@ -2,6 +2,7 @@
 build/
 build-cmake/
 build-*/
+tools/
 *.o
 *.obj
 *.exe
@@ -15,6 +16,11 @@ Makefile.*
 moc_*.cpp
 qrc_*.cpp
 ui_*.h
+
+# Report scratch output
+submission/pages/
+submission/test-*.pdf
+submission/test-page-*.png
 
 # Editor / OS noise
 .vscode/

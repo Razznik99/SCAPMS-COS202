@@ -1,0 +1,142 @@
+@startuml domain-class-diagram
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 11
+skinparam nodesep 35
+skinparam ranksep 45
+skinparam class {
+  BackgroundColor #F8FAFC
+  BorderColor #1E293B
+  ArrowColor #1E293B
+  HeaderBackgroundColor #E2E8F0
+}
+hide empty members
+title SCAPMS domain model - inheritance, interface, composition and association
+
+abstract class PatientRecord {
+  - id : string
+  - name : string
+  - age : int
+  - contact : string
+  - gender : string
+  - registeredOn : string
+  + id() : string
+  + name() : string
+  + age() : int
+  + contact() : string
+  + category() : string {abstract}
+  + priorityLevel() : int {abstract}
+  + priorityLabel() : string {abstract}
+  + consultationFee() : double {abstract}
+  + clinicalSummary() : string {abstract}
+  + typeTag() : string {abstract}
+  + clone() : PatientRecord* {abstract}
+  + validate() : void
+  + serialize() : string
+}
+
+class GeneralPatient {
+  - insuranceProvider : string
+  - chronicCondition : string
+  + consultationFee() : double
+  + clinicalSummary() : string
+  + slotMinutes() : int
+}
+
+class EmergencyPatient {
+  - triageLevel : int
+  - arrivalMode : string
+  - admitted : bool
+  + consultationFee() : double
+  + triageLabel() : string
+  + isCritical() : bool
+}
+
+class FollowUpPatient {
+  - originalVisitDate : string
+  - followUpIntervalDays : int
+  - referringDoctor : string
+  + dueDate() : string
+  + isOverdue() : bool
+  + consultationFee() : double
+}
+
+interface Appointable <<interface>> {
+  + scheduleAppointment(a : Appointment) : bool
+  + cancelAppointment(id : string) : bool
+  + appointmentIds() : vector<string>
+  + appointmentCount() : size_t
+}
+
+class AppointableImpl {
+  # appointmentIds : vector<string>
+  + scheduleAppointment(a : Appointment) : bool
+  + cancelAppointment(id : string) : bool
+  + appointmentIds() : vector<string>
+}
+
+class Appointment {
+  - id : string
+  - patientId : string
+  - date : string
+  - time : string
+  - serviceCode : string
+  - clinician : string
+  - status : AppointmentStatus
+  - fee : double
+  - notes : string
+  + validate() : void
+  + serialize() : string
+  + statusText() : string
+  + startKey() : string
+}
+
+enum AppointmentStatus {
+  Pending
+  Completed
+  Cancelled
+}
+
+class MedicalService {
+  - code : string
+  - name : string
+  - category : string
+  - durationMinutes : int
+  - baseFee : double
+  + label() : string
+}
+
+class ClinicDatabase {
+  - patients : vector<PatientRecord>
+  - appointments : vector<Appointment>
+  - services : vector<MedicalService>
+  - recentPatients[10] : PatientRecord*
+  - recentCount : int
+  + addPatient(p)
+  + removePatient(id) : bool
+  + findPatientById(id) : PatientRecord*
+  + addAppointment(a)
+  + appointmentsForPatient(id) : vector<Appointment>
+  + touchRecent(p)
+  + recentPatients() : vector<PatientRecord*>
+  + saveTo(dir)
+  + loadFrom(dir)
+}
+
+PatientRecord <|-- GeneralPatient
+PatientRecord <|-- EmergencyPatient
+PatientRecord <|-- FollowUpPatient
+Appointable <|.. AppointableImpl
+AppointableImpl <|-- GeneralPatient
+AppointableImpl <|-- FollowUpPatient
+
+ClinicDatabase "1" *-- "0..*" PatientRecord : owns
+ClinicDatabase "1" *-- "0..*" Appointment : stores
+ClinicDatabase "1" *-- "0..*" MedicalService : catalogue
+ClinicDatabase "1" o-- "0..10" PatientRecord : recent cache
+Appointment "0..*" --> "1" MedicalService : uses
+PatientRecord "1" -- "0..*" Appointment : "is booked for"
+Appointment --> AppointmentStatus
+@enduml

@@ -5,6 +5,11 @@ A complete C++17 / Qt 6 Widgets desktop application for a university clinic: pat
 registration, appointments, a triage-aware waiting queue, student-written searching and
 sorting, an undo stack, CSV persistence and clinic reports.
 
+> **Submission report (PDF):**
+> [`submission/COS202_SCAPMS_Submission_Report.pdf`](submission/COS202_SCAPMS_Submission_Report.pdf)
+> — project report, UML class diagrams, seven screenshots, core source listings and the
+> requirement traceability matrix.
+
 ![Dashboard](screenshots/01-dashboard.png)
 
 ---
@@ -280,7 +285,17 @@ record is valid, so a bad file never half-loads a clinic.
 
 ---
 
-## 9. Known limitations
+## 9. Documentation
+
+* **Submission report:** [`submission/COS202_SCAPMS_Submission_Report.pdf`](submission/COS202_SCAPMS_Submission_Report.pdf)
+* **Requirement traceability:** [`REQUIREMENTS_MATRIX.md`](REQUIREMENTS_MATRIX.md)
+* **Report source:** `docs/report/COS202_SCAPMS_Report.md` (rebuild with
+  `powershell -File docs/report/build-report.ps1`)
+* **UML sources:** `docs/uml/*.puml` (rendered with PlantUML + Graphviz)
+
+---
+
+## 10. Known limitations
 
 * The waiting queue is session-only data; it is intentionally not written to disk because it
   represents the current clinic day.

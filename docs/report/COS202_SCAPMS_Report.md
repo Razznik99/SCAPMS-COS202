@@ -12,7 +12,11 @@ lang: en-GB
 {\Large Smart Clinic Appointment \& Patient Management System}\\[16pt]
 \rule{\textwidth}{1.2pt}\\[28pt]
 \includegraphics[width=0.88\textwidth]{screenshots/01-dashboard.png}\\[24pt]
-{\large Submitted by: Otito Ebigbo (GitHub: Razznik99)}\\[4pt]
+{\large Submitted by: Otito Ugonna Emeka-Ebigbo (GitHub: Razznik99)}\\[6pt]
+{\large Email: o.emeka-ebigbo9627@miva.edu.ng}\\[4pt]
+{\large Student ID: 301819627}\\[4pt]
+{\large Matriculation Number: 2025/A/SENG/0253}\\[4pt]
+{\large Department: Software Engineering}\\[4pt]
 {\large Repository: \url{https://github.com/Razznik99/SCAPMS-COS202}}\\[4pt]
 {\large Date: 21 October 2026}
 \vfill

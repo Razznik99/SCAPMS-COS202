@@ -1,0 +1,14 @@
+# SCAPMS medical services (v1)
+# code,name,category,durationMinutes,baseFee
+GEN-CON,General Consultation,Consultation,20,2500.00
+EMG-CON,Emergency Consultation,Emergency,15,7500.00
+FUP-CON,Follow-Up Review,Consultation,15,1500.00
+IMM-ADU,Adult Immunisation,Immunisation,10,1800.00
+IMM-CHD,Child Immunisation,Immunisation,10,1200.00
+LAB-BLD,Blood Panel (Laboratory),Laboratory,15,4500.00
+LAB-MLR,Malaria Test,Laboratory,10,1500.00
+DEN-SCL,Dental Scaling,Dental,30,6000.00
+MAT-ANC,Antenatal Check,Maternity,25,3500.00
+PHA-REF,Pharmacy Refill Review,Pharmacy,10,1000.00
+COU-SES,Counselling Session,Counselling,40,4000.00
+PHY-EXM,Pre-Employment Physical,Screening,30,5000.00

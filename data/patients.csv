@@ -1,0 +1,16 @@
+# SCAPMS patient records (v1)
+# type,id,name,age,gender,contact,registeredOn,field1,field2,field3
+GENERAL,P-0001,Amina Bello,34,Female,+234 803 555 0101,2026-10-21,NHIS,Hypertension
+EMERGENCY,P-0002,Chinedu Okafor,41,Male,+234 805 555 0102,2026-10-21,2,Ambulance,yes
+FOLLOWUP,P-0003,Fatima Yusuf,28,Female,+234 807 555 0103,2026-10-21,2026-09-21,14,Dr. Adeyemi
+GENERAL,P-0004,Tunde Adebayo,52,Male,+234 809 555 0104,2026-10-21,Self-Pay,Type 2 Diabetes
+GENERAL,P-0005,Ngozi Eze,19,Female,+234 802 555 0105,2026-10-21,AXA Mansard,None
+EMERGENCY,P-0006,Ibrahim Musa,67,Male,+234 806 555 0106,2026-10-21,1,Referral,yes
+FOLLOWUP,P-0007,Blessing Okon,36,Female,+234 808 555 0107,2026-10-21,2026-09-30,21,Dr. Balogun
+GENERAL,P-0008,Emeka Nwosu,45,Male,+234 810 555 0108,2026-10-21,Self-Pay,Asthma
+GENERAL,P-0009,Halima Sani,8,Female,+234 803 555 0109,2026-10-21,NHIS,None
+EMERGENCY,P-0010,Segun Ojo,73,Male,+234 805 555 0110,2026-10-21,3,Walk-in,no
+FOLLOWUP,P-0011,Adaeze Umeh,31,Female,+234 807 555 0111,2026-10-21,2026-10-11,10,Dr. Adeyemi
+GENERAL,P-0012,Yusuf Lawal,26,Male,+234 809 555 0112,2026-10-21,Reliance HMO,Peptic ulcer
+GENERAL,P-0013,Chiamaka Obi,58,Female,+234 802 555 0113,2026-10-21,NHIS,Arthritis
+EMERGENCY,P-0014,Bala Abubakar,39,Male,+234 806 555 0114,2026-10-21,4,Walk-in,no

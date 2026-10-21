@@ -1,0 +1,27 @@
+# SCAPMS appointments (v1)
+# id,patientId,date,time,serviceCode,clinician,status,fee,notes
+APT-0001,P-0001,2026-10-14,09:00,GEN-CON,Dr. Adeyemi,Completed,2500.00,Blood pressure review
+APT-0002,P-0004,2026-10-14,10:00,GEN-CON,Dr. Adeyemi,Completed,2500.00,Diabetes medication review
+APT-0003,P-0003,2026-10-15,11:00,FUP-CON,Dr. Balogun,Completed,1000.00,Wound check
+APT-0004,P-0005,2026-10-16,09:30,IMM-ADU,Nurse Okafor,Completed,1800.00,Hepatitis B booster
+APT-0005,P-0001,2026-10-17,14:00,LAB-BLD,Dr. Adeyemi,Completed,4500.00,Full blood count
+APT-0006,P-0008,2026-10-17,15:00,GEN-CON,Dr. Balogun,Cancelled,2500.00,Patient travelled
+APT-0007,P-0009,2026-10-18,10:00,IMM-CHD,Nurse Okafor,Completed,1200.00,Routine immunisation
+APT-0008,P-0012,2026-10-19,12:00,GEN-CON,Dr. Adeyemi,Completed,2500.00,Ulcer follow-up
+APT-0009,P-0013,2026-10-20,09:00,GEN-CON,Dr. Balogun,Completed,2500.00,Joint pain assessment
+APT-0022,P-0007,2026-10-13,09:00,FUP-CON,Dr. Balogun,Completed,1500.00,Post-treatment review
+APT-0023,P-0003,2026-10-09,10:00,FUP-CON,Dr. Adeyemi,Completed,1000.00,Initial follow-up
+APT-0024,P-0005,2026-10-12,11:30,GEN-CON,Dr. Balogun,Completed,2500.00,General consultation
+APT-0025,P-0013,2026-10-06,09:30,GEN-CON,Dr. Adeyemi,Completed,2500.00,Arthritis review
+APT-0010,P-0001,2026-10-21,09:00,GEN-CON,Dr. Adeyemi,Pending,2500.00,Hypertension review
+APT-0011,P-0011,2026-10-21,09:30,FUP-CON,Dr. Balogun,Pending,1000.00,Review of test results
+APT-0012,P-0004,2026-10-21,10:00,LAB-MLR,Dr. Adeyemi,Completed,1500.00,Malaria test - negative
+APT-0013,P-0005,2026-10-21,11:00,DEN-SCL,Dr. Eze,Pending,6000.00,Dental scaling
+APT-0014,P-0007,2026-10-21,12:00,FUP-CON,Dr. Balogun,Cancelled,1500.00,Rescheduled by patient
+APT-0015,P-0003,2026-10-22,09:00,FUP-CON,Dr. Adeyemi,Pending,1000.00,Follow-up review
+APT-0016,P-0008,2026-10-22,10:30,GEN-CON,Dr. Balogun,Pending,2500.00,Asthma review
+APT-0017,P-0009,2026-10-23,09:30,IMM-CHD,Nurse Okafor,Pending,1200.00,Second dose
+APT-0018,P-0012,2026-10-23,11:00,PHY-EXM,Dr. Eze,Pending,5000.00,Pre-employment screening
+APT-0019,P-0013,2026-10-24,15:00,GEN-CON,Dr. Adeyemi,Pending,2500.00,Medication review
+APT-0020,P-0005,2026-10-26,09:00,COU-SES,Dr. Balogun,Pending,4000.00,Counselling session
+APT-0021,P-0011,2026-10-27,10:00,FUP-CON,Dr. Adeyemi,Pending,1000.00,Follow-up review

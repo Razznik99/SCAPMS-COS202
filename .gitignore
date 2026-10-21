@@ -1,0 +1,24 @@
+# Build outputs
+build/
+build-cmake/
+build-*/
+*.o
+*.obj
+*.exe
+*.dll
+Makefile
+Makefile.*
+.qmake.stash
+.moc/
+.rcc/
+.obj/
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.user
+Thumbs.db
+desktop.ini
